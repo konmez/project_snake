@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+ <!-- Based on the design by Code Institute, "Love Running", 2024 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- meta tags for search engines-->
+   <meta name="description"  content="Lifehack, life hack, household, diy, advice, advices, harmful, stupid, useless" >
+   <meta name="keywords" content="Lifehack, life hack, household, diy, advice, advices, harmful, stupid, useless">
+
+  <title>Lifehack Indeed</title>
+
+  <!-- favicon -->
+   <link rel="apple-touch-icon" sizes="100x100"  href="assets/images/favicon_io/apple-touch-icon.png">
+   <link rel="icon"  sizes="32x32"  href="assets/images/favicon_io/favicon-32x32.png">
+   <link rel="icon"  sizes="16x16"  href="assets/images/favicon_io/favicon-16x16.png">
+
+    <!-- Stylesheet -->   
+   <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <!--  Header-->
+
+  <!-- insert standard header (works but requires resize styling to fit size of content)-->
+<!-- <embed
+type="text/html"
+src="stdrt_header.html"
+width="100%"
+style="border: solid 2px red;"
+/> -->
+
+<header >
+  <a href="index.html">
+    <h1 id="logo">Lifehack Indeed</h1>
+  </a>
+  <input type="checkbox" id="nav-toggled" name="nav-toggled">
+  <label for="nav-toggled" class="nav-toggled-label"><i class="fa-solid fa-bars"></i></label>
+  <nav>
+
+    <ul id="menu" >
+      <li> <a href="index.html"  class="active">Home</a> </li>
+      <li>
+        
+        <label for="cat-toggled" class="cat-toggled-label">Category</label>
+        <input type="checkbox" id="cat-toggled" name="cat-toggled" >
+          <ul id="cat-menu">
+            <li><a href="diy.html"  >DIY</a></li>
+            <li><a href="kitchen.html"  >Kitchen</a></li>
+            <li><a href="household.html"  >Household</a></li>
+            <li><a href="other.html"  >Other</a></li>         
+
+          </ul>
+
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>   
+
+
+    <!-- main content-->
+     <main>
+     
+       
+      <section id="reasons">
+        <h2>diy</h2>
+        <h3>Here is collection of some popular  lifehacks from the internet</h3>
+        
+        <h4>
+          Think critically, Work carefully, and please share your expierience with us!
+        </h4>        
+        <hr class="hr-line">  
+        <div class="row">
+                  <!-- example  1 -->
+                        <div class="example" >
+                            
+                                <div  class="unit-box-diy">
+                                  <img src="./assets/images/pool_noodle.webp" alt=" Lady filling bucket with pool noodle" >                    
+                                      <div  style="flex-grow: 2;">
+                                          <h4>lifehack</h4>                    
+                                          <p >Use a pool noodle to fill the bucket.</p>  
+                                      </div>
+                                </div>                      
+                        </div>
+
+                        <div class="example" >                      
+                                  <div class="unit-box-diy">
+
+                                    <div >
+                                      <h4>Really?</h4>                    
+                                      <p >No shower hose,no buthtub, where bucket fits?
+                                        No outside tap? Why do You have a pool noodle at all?
+                                        OK. At least no harm from this advice.</p>  
+                                    </div>
+                                    <img src="./assets/images/pexels-yankrukov_smaller.jpg" alt=" Lady confusingly staring at laptop" >               
+                                        
+                                  </div>
+                        </div>          
+           <!-- en of example 1 -->          
+          </div> 
+          <hr class="hr-line">
+           <!-- example  2 -->
+           <div class="row">  
+                      <div class="example" >
+                                            
+                        <div  class="unit-box-diy">
+                          <img src="./assets/images/masking_tape.webp"   alt=" Lady stick masking tape to the wall">                    
+                              <div >
+                                  <h4>lifehack</h4>                    
+                                  <p >Use a masking tape to make marks on a wall.</p>  
+                              </div>
+                        </div>                      
+                      </div>
+
+                      <div class="example" >                      
+                          <div class="unit-box-diy">
+
+                            <div >
+                              <h4>Really?</h4>                    
+                              <p>Yes, You can, but there is a good chance 
+                                it will come off with a paint from a wall and You end up  with much more damage,
+                                than you aim to avoide.</p>  
+                            </div>
+                            <img src="./assets/images/Be_carefull-smaller.jpg" alt=" picture with sign BE CAREFULL">                      
+                                
+                          </div>
+                           <!-- end of example 2 -->
+                      </div>      
+             </div>
+             <hr class="hr-line">
+      </section>
+      
+
+    </main>
+
+     <!--  footer-->
+     <embed
+     type="text/html"
+     src="./assets/embedCode/stdrt_footer.html"
+     style="width: 100%;">
+
+       <!-- <footer> 
+        <ul  id="social-networks">
+
+        <li> <a href="https://www.facebook.com/" target="_blank" rel="noopener"  
+          aria-label="Visit our Facebook page (opens in a new tab)">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a> 
+        </li>
+        
+        <li><a href="https://x.com/?lang=en" target="_blank" rel="noopener"  
+          aria-label="Visit our twitter page (opens in a new tab)">
+          <i class="fa-brands fa-square-x-twitter"></i>
+        </a> 
+        </li>
+
+        <li>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener"  
+          aria-label="Visit our youtube page (opens in a new tab)">
+          <i class="fa-brands fa-square-youtube"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener"  
+          aria-label="Visit our instagram page (opens in a new tab)">
+          <i class="fa-brands fa-square-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </footer> -->
+    
+      <!-- fontawesome kit -->
+      <script src="https://kit.fontawesome.com/74c90bdddd.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+:root {
+/* colour palette 1 */
+   --color-1: #F0824F;
+   --color-2: #7BB0AB;
+   --color-3: #6EF0E3;
+   --color-4: #A18B81;
+   --color-5: #067066;
+   --color-6: #471b06;   
+    
+   --main-background :  lightgray;   
+   --header-background: var(--color-2);
+   --control-button:var(--color-5);
+   --pause-button: gray;
+  }
+
+/* Asterisk wildcard selector to override default styles added by the browser */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Generic project styles */
+    color: #3a3a3a;
+    font-family:  'Tahoma', 'Verdana', sans-serif;    
+    /* background-color: aquamarine; */
+}
+
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Verdana','Tahoma',  sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525; 
+} 
+
+a{
+   text-decoration: none;
+}
+
+/* Header */
+/* moved to header.css */
+  /* end of header section*/
+
+  /* Main content */
+
+main {
+    background-color: var(--main-background);
+    /* background-image: url(../images/james-lee-8vU2drMLiyM-unsplash.jpg); */
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;    
+    margin-top: 50px;    
+    /* Enable flex properties for the child elements */
+    display: flex;
+    flex-direction:column;
+    margin-top: 40px;
+    /* border: solid 3px red; */
+}
+
+
+
+
+
+
+.canvas-wrap{
+    width: 99%;
+    display: flex;
+    text-align: center;   
+    flex-direction: column; 
+
+    border: solid 3px green;
+}
+
+.canvas-container {    
+    flex-direction: row;
+    border: solid 1px yellow;
+}
+
+#mycanvas {
+    width: 600px ;
+    height: 500px;
+    margin: auto;
+    /* width: 80%;
+    height: 50%; */
+}
+
+#snake-score{
+    background-color: var(--color-3) ;
+    font-size:x-large;
+    
+}
+
+
+
+
+.control-area {
+    display: flex;
+    flex-direction:row;   
+    margin-left: 5px;
+    align-items: center;
+    border: solid 5px brown;
+/* height - the same as height of canvas */    
+align-items: flex-start;
+}
+
+#score-div{
+    
+    margin-left:20px;
+    /* border: solid 2px red; */
+
+}
+
+.score-text{
+    
+    text-align: center;
+    
+
+}
+
+
+.buttons{    
+   margin: auto;
+    order: 5;
+}
+
+.row{
+    margin:auto;
+    /* border: solid 2px blue; */
+    
+}
+
+#pause-button{
+    /* border: solid 2px aqua; */
+    margin-top: 60px;
+    margin-left: -120px;
+}
+
+
+/* for a larger screen ---TEST!!!!!!!!!!!*/
+
+
+@media screen and (min-width:768px){
+#score-div{
+
+    margin:auto;
+    
+
+}
+#pause-button{
+   
+    margin:auto;
+    /* margin-top: 60px;
+    margin-left: -120px; */
+}    
+    
+.canvas-wrap{
+    width: 99%;
+    display: flex;
+    text-align: center;  
+    flex-direction:row; 
+
+
+    /* border: solid 3px green; */
+}
+
+
+.control-area {
+    display: flex;
+    flex-direction:column;   
+    margin-left: 5px;
+    align-items: center;
+    /* border: solid 5px brown; */
+/* height - the same as height of canvas */
+    height: 500px;
+
+}
+
+
+.row{
+    margin:auto;
+    /* border: solid 2px blue; */
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin:auto;    
+  
+}
+
+.score-text{  
+    text-align: center;
+    align-items: center;    
+    
+}
+
+
+
+
+}
+
+
