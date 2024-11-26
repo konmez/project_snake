@@ -12,10 +12,7 @@ function makeApple() {
     apArray.push(x);apArray.push(y);
     //console.log('from makeApple', apArray);
     return apArray;
-}
-
-
-
+} 
 
 /**
  * self explainatory
@@ -37,7 +34,7 @@ function drawApple(app_arr) {
 function hitApple(){
     let head = mySnake[mySnake.length -1]; 
     if ((Math.abs(head[0]-apple[0])<linkLength)&&(Math.abs(head[1]-apple[1])<linkLength)) {
-           console.log('HIT!!');
+          // console.log('from hitApple:  HIT!!');
            return true;          
     }
     return  false;    

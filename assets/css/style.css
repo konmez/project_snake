@@ -10,7 +10,7 @@
    --main-background :  lightgray;   
    --header-background: var(--color-2);
    --control-button:var(--color-5);
-   --pause-button: gray;
+   --sp-buttons-color: var(--color-6);
   }
 
 /* Asterisk wildcard selector to override default styles added by the browser */
@@ -79,7 +79,7 @@ main {
 
 .canvas-container {    
     flex-direction: row;
-    border: solid 1px yellow;
+    /* border: solid 1px yellow; */
 }
 
 #mycanvas {
@@ -91,7 +91,7 @@ main {
 }
 
 #snake-score{
-    background-color: var(--color-3) ;
+    background-color: var(--color-1) ;
     font-size:x-large;
     
 }
@@ -106,27 +106,35 @@ main {
     align-items: center;
     border: solid 5px brown;
 /* height - the same as height of canvas */    
-align-items: flex-start;
+    align-items: flex-start;
+    margin:auto;
+    max-width: 95vh;
 }
 
-#score-div{
-    
-    margin-left:20px;
+#score-div{    
+    margin-left:1rem;
     /* border: solid 2px red; */
 
 }
 
-.score-text{
-    
-    text-align: center;
-    
+.start-pause {
+    display: flex;
+    flex-direction:row;  
+    /* border: solid 2px yellowgreen; */
 
+    margin-top: 3rem;
+    margin-left: -8rem;
 }
 
+.score-text{    
+    text-align: center;    
+}
 
 .buttons{    
    margin: auto;
     order: 5;
+
+    /* border: solid 2px blue; */
 }
 
 .row{
@@ -135,37 +143,36 @@ align-items: flex-start;
     
 }
 
-#pause-button{
-    /* border: solid 2px aqua; */
-    margin-top: 60px;
-    margin-left: -120px;
+
+#restart{
+    padding: 5px;
+    margin: auto;
 }
 
+#pause-button{
+    padding: 5px;
+}
 
-/* for a larger screen ---TEST!!!!!!!!!!!*/
-
+/* for a larger screen ---!!!!!!!!!!!*/
 
 @media screen and (min-width:768px){
 #score-div{
-
     margin:auto;
-    
-
 }
-#pause-button{
-   
+
+.start-pause {
+    display: flex;
+    flex-direction:row;  
+    /* border: solid 2px yellowgreen; */
     margin:auto;
-    /* margin-top: 60px;
-    margin-left: -120px; */
-}    
+}
+
     
 .canvas-wrap{
     width: 99%;
     display: flex;
     text-align: center;  
     flex-direction:row; 
-
-
     /* border: solid 3px green; */
 }
 
@@ -192,13 +199,11 @@ align-items: flex-start;
     justify-content: center;
     align-items: center; 
     margin:auto;    
-  
 }
 
 .score-text{  
     text-align: center;
     align-items: center;    
-    
 }
 
 

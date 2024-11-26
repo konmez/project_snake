@@ -55,11 +55,6 @@
     <main>
 
 
-        <!-- <div class="score-text"> 
-          <p >Your score is: <span id="snake-score"> 0 </span> </p>
-        </div> -->
-       
-
         <!-- //<canvas id='mycanvas' width='535' height='360'></canvas> -->
        <div class="canvas-wrap center"   >
           <div class="canvas-container"  > 
@@ -72,39 +67,54 @@
 
                 <div class="control-area ">
 
-                  <div class="score-text    center "   id = 'score-div'> 
+                  <div class="score-text center "   id = 'score-div'> 
                     <p >Your score is: <span id="snake-score"> 0 </span> </p>
                   </div>
 
-                  <div   class="buttons">                   
+                  <div    class="start-pause">
+                    
+                      <div class=" center score-text" id="restart">
+                        
+                        <button class="   btn-big btn-sp" data-type="start" >
+                          <span class="padding"> <i class="fa-solid fa-play"></i></span>
+                        </button>   
+                      </div> 
+
+                      <div class=" center score-text" id="pause-button">
+                        <button class="  btn-big btn-sp" data-type="pause" >
+                            <span class="padding"> <i class="fa-solid fa-pause"></i></span>
+                        </button>   
+                      </div>
+
+                  </div>
 
 
+
+                  <div   class="buttons">              
+               
                         <div class="row">
-                              <button data-type="up"  class=" btn btn-big btn-drctn">
+                              <button data-type="up"  class="btn-big btn-drctn">
                                 <i class="fa-solid fa-arrow-up"></i>
-                          </button>
-                        </div>
+                              </button>
+                        </div>                   
 
                         <div class="row">
-                          <button data-type="left" class="btn btn-big btn-drctn">
+                            <button data-type="left" class="btn-big btn-drctn">
                             <i class="fa-solid fa-arrow-left"></i>                             
                           </button>
                     
-                          <button data-type="right" class="btn btn-big btn-drctn">
+                          <button data-type="right" class="btn-big btn-drctn">
                             <i class="fa-solid fa-arrow-right"></i>
                           </button>
                         </div>
                         <div class="row">
-                          <button data-type="down" class="btn btn-big btn-drctn">
+                          <button data-type="down" class=" btn-big btn-drctn">
                             <i class="fa-solid fa-arrow-down"></i>
                           </button>
                         </div>  
-                  </div>   
-                  <div class=" center score-text" id="pause-button">
-                    <button class="btn btn--gray center score-text" data-type="pause" >
-                      <span class="padding"> Start/Pause</button></span></button>   
-                  </div> 
+                  </div>  
 
+                 
 
                 </div>    
         </div>
@@ -125,7 +135,7 @@
     <script src='./assets/js/checkControlEvents.js'> </script>
     <script src='./assets/js/snakeRegarding.js'> </script>
     <script src='./assets/js/apple.js'> </script>
-    <script src='./assets/js/script_1.js'></script>
+    <script src='./assets/js/script.js'></script>
     
 
 

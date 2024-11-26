@@ -1,62 +1,118 @@
 
-
 /**
  * responds to "keydown" event for window object and sets the value for direction array
- * if correct key pressed, prevent moving backwards
+ * if correct key pressed,
  */
-function keyCheck(event) {
-  
-    //(pressing left while moving
-  // left isn't doing anything, and pressing right while moving left
-  // shouldn't let you hit your own body)
-    let mkey = event.key;   
+function keyCheck(event) { 
+
+    // next 2 lines prevent calling event response twice(from stack ovrflaw)
+        event.stopPropagation();
+        event.preventDefault();
     
-    if (mkey ===' ') {
-        console.log('from key check; pressed :', mkey ,'Space!!'); 
-        pause_game = !pause_game;
-    } 
+       // console.log('from keyCheck; event :', event); 
+      //  key_counter ++;
     
-    if (direction[1]===0){
-        //console.log('from key check111; pressed :', mkey ,'dirction', direction);
-        if (mkey ==='ArrowUp' ){ direction = [0, -1];
-        } else if (mkey ==='ArrowDown') { direction = [0, 1];}
-       // console.log('from key check22222; pressed :', mkey ,'dirction', direction);
+        let key_pressed = event.key;    
+        let control = '';
+       
+        if (key_pressed ===' ')          {control = 'pause'};
+        if (key_pressed ==='ArrowRight') {control = 'right'};
+        if (key_pressed ==='ArrowUp')    {control = 'up'   };
+        if (key_pressed ==='ArrowDown')  {control = 'down' };
+        if (key_pressed ==='ArrowLeft')  {control = 'left' };
+        
+        //console.log('from key check; pressed :', key_pressed ,'key_counter:  ', key_counter);        
+        
+        reactToEvent(control);
+       
     }
-
-    if (direction[0]===0){
-        if (mkey ==='ArrowRight'){ direction = [1, 0];
-        } else if (mkey ==='ArrowLeft') { direction = [-1, 0];}
-    }     
-
-    if (mkey ==='Escape') {
-        console.log('from key check; pressed :', mkey ,'Escape!!'); 
-    }
-
     
-    key_pressed =  mkey;
-    //console.log('from key check; pressed :', mkey ,'direc:', direction);   
-}
+    //console.log('after key check; pressed :',  key_pressed );   
+    
+    function buttonCheck(event){
+        
+       // btn_counter ++;
+       //console.log('frombuttonCheck; btn_counter :', btn_counter, 'control:', control); 
 
-
-
-function checkButtons(event){
-    if (this.getAttribute("data-type") === "pause"){ 
-        console.log('pause pressed'); 
-        pause_game = !pause_game;   
-        console.log('pause_game: ', pause_game);              
-      } else { control_button = this.getAttribute("data-type");                
-              // console.log('control_button: ', control_button);
-              // console.log('direction: ', direction); 
-          }
-
-    if (direction[1]===0){                
-        if ( control_button === 'up'){ direction = [0, -1];
-        } else if ( control_button === 'down') { direction = [0, 1];}               
-    } else if (direction[0]===0) {
-        if ( control_button === 'right'){ direction = [1, 0];
-        } else if ( control_button === 'left') { direction = [-1, 0];}
-    } 
-
-}
-
-
+        let control = '';
+    
+        //console.log('frombuttonCheck; event :',event); 
+    
+    
+    // next 2 lines prevent calling event response twice(from stack ovrflaw)
+        event.stopPropagation();
+        event.preventDefault();
+    
+          
+    
+        if (this.getAttribute("data-type") === "pause"){control = 'pause';
+            // console.log('frombuttonCheck; pressed :', control,'direc:', direction); 
+        } 
+    
+        if (this.getAttribute("data-type") === "up"){control = 'up';
+            // console.log('frombuttonCheck; pressed :', control,'direc:', direction);
+        }
+    
+        if (this.getAttribute("data-type") === "down"){control = 'down';
+            // console.log('frombuttonCheck; pressed :', control,'direc:', direction);
+        }
+    
+        if (this.getAttribute("data-type") === "right"){control = 'right';
+            // console.log('frombuttonCheck; pressed :', control,'direc:', direction);
+        }
+    
+        if (this.getAttribute("data-type") === "left"){control = 'left';
+            // console.log('frombuttonCheck; pressed :', control,'direc:', direction);
+        }
+    
+        if (this.getAttribute("data-type") === "start"){ control = 'start';
+            // console.log('frombuttonCheck; pressed :', control,'direc:', direction);
+        }
+    
+        //console.log('frombuttonCheck; pressed :', control,'direc:', direction);
+      
+        reactToEvent(control);
+    }
+    
+    
+    /**
+     * change direction according to key or button pressed or start/pause game
+     */
+    function reactToEvent(my_control) {
+    
+        let control = my_control;
+    
+       // console.log('from reactToEvent :', control,'direc:', direction);
+    
+        if (control === "pause"){ 
+                //console.log('from reactToEvent, pause pressed,', 'is game over :  ', is_game_over) ; 
+               // console.log('from reactToEvent, pause pressed', 'game_started :  ', game_started) ; 
+    
+                if (game_started) {is_game_paused = !is_game_paused; }
+    
+                //console.log('from reactToEvent, is_game_paused: ', is_game_paused);              
+        } 
+    
+        if (control === "start") {             
+            // console.log('from reactToEvent :  game_started: ', game_started);      
+            // console.log('from reactToEvent :  LET"S start !!!');
+            
+            startGame();            
+        } 
+    
+    
+        // prevent moving backwards
+        if (direction[1]===0){                
+            if ( control === 'up'){ direction = [0, -1];
+            } else if ( control === 'down') { direction = [0, 1];}      
+        }     
+    
+        if (direction[0]===0) {
+            if ( control === 'right'){ direction = [1, 0];
+            } else if ( control === 'left') { direction = [-1, 0];}
+        }    
+    }
+    
+    
+    
+    

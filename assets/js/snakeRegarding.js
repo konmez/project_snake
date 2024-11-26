@@ -5,16 +5,16 @@
 function snakeShift( vector) {   
     let snArray = [...mySnake];
     let x = snArray[snArray.length-1][0]; let y = snArray[snArray.length-1][1];
-    console.log('From snakeShift:  vector ', vector);
-    console.log('From snakeShift: head before ', snArray[snArray.length-1]);
+    // console.log('From snakeShift:  vector ', vector);
+    // console.log('From snakeShift: head before ', snArray[snArray.length-1]);
    //let head = [mySnake[mySnake.length-1][0], mySnake[mySnake.length-1][1] ] ;   
-    x = x+ linkLength*vector[0];console.log('From snakeShift: head x ',x);
-    y = y+ linkLength*vector[1];console.log('From snakeShift: head y ', y);
+    x = x+ linkLength*vector[0];   //  console.log('From snakeShift: head x ',x);
+    y = y+ linkLength*vector[1];     //console.log('From snakeShift: head y ', y);
     let head = [x,y];
 
     mySnake.shift();
     mySnake.push(head); 
-    console.log('From snakeShift:  snArr ', snArray, 'From snakeShift:  mySn ',mySnake, 'key:', key_pressed) ;  
+    // console.log('From snakeShift:  snArr ', snArray, 'From snakeShift:  mySn ',mySnake, 'key:', key_pressed) ;  
 }
 /**
  * check if the snake hit itself or an obstacle
@@ -42,7 +42,6 @@ function hitEdgeOrSelf(){
     }
     return  false;    
 }   
-
 
 
 /**
