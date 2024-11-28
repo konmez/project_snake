@@ -17,29 +17,27 @@
    <link rel="icon"  sizes="16x16"  href="./assets/images/favicon_io/favicon-16x16.png">
 
     <!-- Stylesheet -->   
-   <link rel="stylesheet" href="./assets/css/style.css">
-   <link rel="stylesheet" href="./assets/css/header.css">
-   <link rel="stylesheet" href="./assets/css/buttons.css">
+
+    <link rel="stylesheet" href="./assets/css/snake_simple_style/general.css">
+    <link rel="stylesheet" href="./assets/css/snake_simple_style/header.css">
+    <link rel="stylesheet" href="./assets/css/snake_simple_style/snake_smpl_canvas.css">  
+    <link rel="stylesheet" href="./assets/css/snake_simple_style/buttons.css">
    
 </head>
-<body>
+<body>   
 
-     
-
-      <header >
-        
-          <h1 id="logo">simple snake</h1>
-       
+      <header >        
+          <h1 id="logo">simple snake</h1>       
         <input type="checkbox" id="nav-toggled" name="nav-toggled">
         <label for="nav-toggled" class="nav-toggled-label"><i class="fa-solid fa-bars"></i></label>
         <nav>
           <ul id="menu" >
-            <li> <a href="index.html"  class="active">Home</a> </li>
+            <li> <a href="index.html"  >Home</a> </li>
             <li>        
-              <label for="cat-toggled" class="cat-toggled-label">Games:</label>
+              <label for="cat-toggled" class="cat-toggled-label"  class="active" >Games:</label>
               <input type="checkbox" id="cat-toggled" name="cat-toggled" >
                 <ul id="cat-menu">
-                  <li><a href="#"  >snake simple</a></li>                  
+                  <li   class="active"><a href="#"  >snake simple</a></li>                  
                   <li><a href="#">another</a></li>
                   <li><a href="#">another2</a></li>
                   <li><a href="#">Other</a></li>
@@ -64,14 +62,13 @@
                 
           </div>
 
-
                 <div class="control-area ">
 
                   <div class="score-text center "   id = 'score-div'> 
                     <p >Your score is: <span id="snake-score"> 0 </span> </p>
                   </div>
 
-                  <div    class="start-pause">
+                  <div  class="start-pause">
                     
                       <div class=" center score-text" id="restart">
                         
@@ -92,13 +89,13 @@
 
                   <div   class="buttons">              
                
-                        <div class="row">
+                        <div class="ctrl-row">
                               <button data-type="up"  class="btn-big btn-drctn">
                                 <i class="fa-solid fa-arrow-up"></i>
                               </button>
                         </div>                   
 
-                        <div class="row">
+                        <div class="ctrl-row">
                             <button data-type="left" class="btn-big btn-drctn">
                             <i class="fa-solid fa-arrow-left"></i>                             
                           </button>
@@ -107,7 +104,7 @@
                             <i class="fa-solid fa-arrow-right"></i>
                           </button>
                         </div>
-                        <div class="row">
+                        <div class="ctrl-row">
                           <button data-type="down" class=" btn-big btn-drctn">
                             <i class="fa-solid fa-arrow-down"></i>
                           </button>

@@ -1,0 +1,106 @@
+
+main {
+    background-color: var(--main-background);
+    /* background: url(../../images/abstract-composition.svg) no-repeat center  center/cover; */
+    
+    flex: 1 0 auto;    
+    margin-top: 50px;    
+    /* Enable flex properties for the child elements */
+    display: flex;
+    flex-direction:column;
+    margin-top: 40px;
+    /* border: solid 3px red; */    
+
+}
+
+
+
+
+
+
+
+
+/* for a larger screen ---  START   !!!!!!!!!!!*/
+
+@media screen and (min-width:768px){
+
+
+    main{
+        /* next lines for embeded header from outer file */    
+        /* margin-top: 40px; */
+         
+    }    
+}
+
+.categories-col {
+
+    width: 50%; 
+    display: flex;   
+    /* float: left; */
+    padding: 5px;    
+    min-height:70px;    
+    max-height: 120px;
+    border:solid 2px  var(--color-6);
+    justify-content: center;
+    
+    padding: 5px;
+    margin: 5px auto ;
+    background-color: var(--color-4);
+    
+}
+
+.categories-col > h3{
+    /* text-align: center;  */
+    color: white;
+    margin: auto;
+}
+
+
+
+/* for a larger screen ---    END   !!!!!!!!!!!*/
+#categories>h2, #categories>h3{
+    color: white;
+    text-align: center;
+    padding-top: 1em;
+
+
+}
+ 
+
+.unit-box h2{
+     align-self: center;  
+ }
+
+.click-it :hover{
+background-color:  rgba(60, 60, 60,0.4);
+
+}
+
+
+.unit-box{       
+    height: 100%;
+    width: 100%;        
+    display: flex;
+      
+    margin: auto;
+    /* border:solid 1px red; */
+ }
+ 
+.unit-box h2{
+     align-self: center;  
+     color: white;
+ }
+ 
+
+
+ .myrow{
+    
+   display: flex;  
+   flex-direction: column;
+    
+    /* border: solid 2px blue;     */
+ 
+}
+
+
+

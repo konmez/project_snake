@@ -1,0 +1,139 @@
+
+
+/* Header */
+header {
+    background-color:  var(--header-background);
+    padding: 0 1rem;
+    position: fixed;   
+    z-index: 99; 
+    width: 100%; 
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;       
+    margin: auto;    
+
+    /* border: solid 2px yellow; */       
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+#logo{
+    font-size: 150%;
+    line-height: 40px;
+    margin: 0 0.5rem;
+}  
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+    display: flex; 
+    flex-direction: row;
+
+    width: 120%;
+    background-color:  var(--header-background);
+    margin-left: -1rem;
+    /* border: solid 2px red; */
+    padding-right: 1rem;
+}
+
+#menu > li {
+    margin-bottom: 1em;
+    padding-left: 1em;
+}
+
+#menu a:hover{
+    border-bottom: 1px solid #3a3a3a;
+    background-color: rgba(60, 60, 60,0.2);
+}  
+
+#cat-menu > li {
+    margin-bottom: 0.5em;
+}
+
+#cat-menu {font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* nav bar styles with toggle on/off */
+nav{
+position: absolute;
+background-color: #ffffff;
+width: 100%;
+box-shadow: 0 2px 2px #3a3a3a;
+padding: 0 1rem;
+left: 0%;
+display: none;
+top: 100%;
+}
+
+/* nav toggle */
+#nav-toggled:checked~nav{
+  display: block;
+}
+
+#nav-toggled{
+    display: none;
+}
+
+.nav-toggled-label{
+    font-size: 2rem;
+}
+
+/* cat toggle */
+#cat-toggled:checked~#cat-menu {
+    display: block;    
+  } 
+
+ #cat-toggled{
+    display: none;
+ }
+  
+  #cat-menu{
+      display: none;      
+      }
+  
+  /* end of header section*/
+
+
+/* Media query: tablet and larger(>=768px) */
+@media screen and (min-width:768px){
+
+
+    /* Header */
+   
+
+nav{
+    display: block;
+    position: relative;
+    width: fit-content;
+    box-shadow: none;
+    padding-bottom: 0rem;
+    background-color:  var(--header-background);
+
+}
+
+#menu{
+    display: flex;
+}
+
+#menu>li{
+    padding-left: 1rem;
+}
+
+.nav-toggled-label{
+    display: none;
+}
+
+
+}

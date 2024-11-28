@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>game</title>    
+    <title>games</title>    
 
     <!--meta tags for search engines-->
    <meta name="description"  content="" >
    <meta name="keywords" content="">
 
+
+   
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="100x100"  href="./assets/images/favicon_io/apple-touch-icon.png">
+  <link rel="icon"  sizes="32x32"  href="./assets/images/favicon_io/favicon-32x32.png">
+  <link rel="icon"  sizes="16x16"  href="./assets/images/favicon_io/favicon-16x16.png">
+
      <!-- Stylesheet    -->
-   <link rel="stylesheet" href="./assets/css/style.css">
+     <link rel="stylesheet" href="./assets/css/index_style/footer.css">   
+     <link rel="stylesheet" href="./assets/css/index_style/general.css"> 
+     <link rel="stylesheet" href="./assets/css/index_style/header.css"> 
+
+   
+   <link rel="stylesheet" href="./assets/css/index_style/style_main.css">
+
 
 
    <script src='./assets/js/OSC.js'></script>
@@ -19,70 +32,105 @@
 </head> 
 <body>
 
-    <!--HEADER-->
+
+      <header >        
+      <h1 id="logo">simple games</h1>       
+      <input type="checkbox" id="nav-toggled" name="nav-toggled">
+      <label for="nav-toggled" class="nav-toggled-label"><i class="fa-solid fa-bars"></i></label>
+      <nav>
+        <ul id="menu" >
+          <li> <a href="index.html"  class="active">Home</a> </li>
+          <li>        
+            <label for="cat-toggled" class="cat-toggled-label">Games:</label>
+            <input type="checkbox" id="cat-toggled" name="cat-toggled" >
+              <ul id="cat-menu">
+                <li><a href="snakesimple.html"  >snake simple</a></li>                  
+                <li><a href="#">another</a></li>
+                <li><a href="#">another2</a></li>
+                <li><a href="#">Other</a></li>
+              </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>   
+
 
     
-     <header >
-        <a href="index.html">
-          <h1 id="logo"> Games</h1></a>
-        <input type="checkbox" id="nav-toggled" name="nav-toggled">        
-        <label for="nav-toggled" class="nav-toggled-label"><i class="fa-solid fa-bars"></i></label>
-        <nav>
-          <ul id="menu">
-            <li> <a href="index.html"  class="active">Home</a> </li>
-            <li>
-              <label for="cat-toggled" class="cat-toggled-label">Category</label>
-              <input type="checkbox" id="cat-toggled" name="cat-toggled">
-                <ul id="cat-menu">
-                  <li><a href="diy.html"  >DIY</a></li>
-                  <li><a href="kitchen.html">Kitchen</a></li>
-                  <li><a href="household.html">Household</a></li>
-                  <li><a href="other.html">Other</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </header>       
     
-    <main>
-            <div class="scores-container">
-                <h3>Snake</h3>
-                <p>Your current score is: <span id="snake-score"> 0</spanspan> </p>
-            </div>
-             
-            <!-- //<canvas id='mycanvas' width='535' height='360'></canvas> -->
-            <div class="canvas-container"> 
-                
-                <canvas id='mycanvas' width='600' height='500'></canvas>
-            </div>
+    <main    >
+       <!-- categories section-->
+       <section id="categories"  >
 
-            <div>
-                <h4>
-                    It's been <span id="timer">0</span> seconds since you loaded the page...
-                </h4>    
-            
-                <script>        
-                    setInterval(function(){ 
-                    let timerElement = document.getElementById('timer');
-                    let currentTime = timerElement.innerHTML;
-                    currentTime++;
-                    timerElement.innerHTML = currentTime;
-                    }, 1000);
-                </script>
-            </div>    
+          <h2>Here are some old classic games</h2>
+          <h3>
+            Let's try it!
+          </h3>       
+            <!-- 4 column row -->
+          <div class="myrow    click-it"  >   
+                    
+              <button class="categories-col  "  onclick="window.location.href='./snakesimple.html'">
+                <h3>snake simple</h3>                      
+              </button>
+
+              <button class="categories-col  "  onclick="window.location.href='./#'">
+                <h3>game3</h3>                      
+              </button>
+
+              <button class="categories-col  "  onclick="window.location.href='./#'">
+                <h3>game3</h3>                      
+              </button>
+        
+              <button class="categories-col  "  onclick="window.location.href='./#'">
+                <h3>game3</h3>                      
+              </button>
+
+          </div>          
+       
+        </section>
+
     </main>
 
- <!--  footer-->
- <embed
- type="text/html"
- src="./assets/embedCode/stdrt_footer.html"
- style="width: 100%;">    
+
+
+ <footer  > 
+  <ul  id="social-networks">
+
+      <li> <a href="https://www.facebook.com/" target="_blank" rel="noopener"  
+              aria-label="Visit our Facebook page (opens in a new tab)">
+              <i class="fa-brands fa-square-facebook"></i>
+      </a> 
+      </li>
+      
+      <li><a href="https://x.com/?lang=en" target="_blank" rel="noopener"  
+              aria-label="Visit our twitter page (opens in a new tab)">
+              <i class="fa-brands fa-square-x-twitter"></i>
+      </a> 
+      </li>
+<!-- 
+      <li>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener"  
+                aria-label="Visit our youtube page (opens in a new tab)">
+                <i class="fa-brands fa-square-youtube"></i>
+            </a>
+      </li> -->
+
+      <li>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener"  
+                  aria-label="Visit our instagram page (opens in a new tab)">
+                <i class="fa-brands fa-square-instagram"></i>
+            </a>
+      </li>
+</ul>
+
+
+
+</footer>
+
+
  
 <!-- fontawesome kit -->
 <script src="https://kit.fontawesome.com/74c90bdddd.js" crossorigin="anonymous"></script>
-<script src='./assets/js/script_1.js'></script>
-
 
 <script src='./assets/js/script_1.js'></script>
 

@@ -1,24 +1,19 @@
 
-.hidden-heading{
-    display: none;
-}
-
 
 /* Header */
 header {
-    /* background-color:  #ffffff; */
-
     background-color:  var(--header-background);
     padding: 0 1rem;
-    position: fixed; 
+    position: fixed;   
     z-index: 99; 
-    width: 100%;
+    width: 100%; 
     box-shadow: 0 2px 2px #3a3a3a;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;   
-    
-    
+    align-items: baseline;       
+    margin: auto;    
+
+    /* border: solid 2px yellow; */       
 }
 
 header a {
@@ -27,15 +22,29 @@ header a {
 }
 
 
+#logo{
+    font-size: 150%;
+    line-height: 40px;
+    margin: 0 0.5rem;
+}  
 
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
+    display: flex; 
+    flex-direction: row;
+
+    width: 120%;
+    background-color:  var(--header-background);
+    margin-left: -1rem;
+    /* border: solid 2px red; */
+    padding-right: 1rem;
 }
 
 #menu > li {
     margin-bottom: 1em;
+    padding-left: 1em;
 }
 
 #menu a:hover{
@@ -44,7 +53,7 @@ header a {
 }  
 
 #cat-menu > li {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 #cat-menu {font-size: 110%;
@@ -83,14 +92,15 @@ top: 100%;
 
 /* cat toggle */
 #cat-toggled:checked~#cat-menu {
-    display: block;
-  }
+    display: block;    
+  } 
+
  #cat-toggled{
     display: none;
  }
   
   #cat-menu{
-      display: none;
+      display: none;      
       }
   
   /* end of header section*/
@@ -98,8 +108,11 @@ top: 100%;
 
 /* Media query: tablet and larger(>=768px) */
 @media screen and (min-width:768px){
+
+
     /* Header */
-    
+   
+
 nav{
     display: block;
     position: relative;
@@ -107,6 +120,7 @@ nav{
     box-shadow: none;
     padding-bottom: 0rem;
     background-color:  var(--header-background);
+
 }
 
 #menu{
@@ -121,9 +135,5 @@ nav{
     display: none;
 }
 
-#logo{
-    font-size: 150%;
-    line-height: 40px;
-    margin: 0 0.5rem;
-}  
+
 }
