@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>games</title>    
+
+  <!--meta tags for search engines-->
+ <meta name="description"  content="" >
+ <meta name="keywords" content="">
+
+
+ 
+<!-- favicon -->
+<link rel="apple-touch-icon" sizes="100x100"  href="./assets/images/favicon_io/apple-touch-icon.png">
+<link rel="icon"  sizes="32x32"  href="./assets/images/favicon_io/favicon-32x32.png">
+<link rel="icon"  sizes="16x16"  href="./assets/images/favicon_io/favicon-16x16.png">
+
+   <!-- Stylesheet    -->
+
+   <link rel="stylesheet" href="./assets/css/contact_style/general.css"> 
+   <link rel="stylesheet" href="./assets/css/contact_style/header.css">   
+   
+   <link rel="stylesheet" href="./assets/css/contact_style/footer.css"> 
+
+   <link rel="stylesheet" href="./assets/css/contact_style/style_main.css">
+
+   <link rel="stylesheet" href="./assets/css/contact_style/form.css">
+
+  
+
+ <script src='./assets/js/OSC.js'></script>
+  
+
+</head> 
+
+<body>
+
+  <!--  Header-->
+  <header >        
+    <h1 id="logo">simple games</h1>       
+    <input type="checkbox" id="nav-toggled" name="nav-toggled">
+    <label for="nav-toggled" class="nav-toggled-label"><i class="fa-solid fa-bars"></i></label>
+    <nav>
+      <ul id="menu" >
+        <li> <a href="index.html"  >Home</a> </li>
+        <li>        
+          <label for="cat-toggled" class="cat-toggled-label">Games:</label>
+          <input type="checkbox" id="cat-toggled" name="cat-toggled" >
+            <ul id="cat-menu">
+              <li><a href="snakesimple.html"  >snake simple</a></li>                  
+              <li><a href="#">another</a></li>
+              <li><a href="#">another2</a></li>
+              <li><a href="#">Other</a></li>
+            </ul>
+        </li>
+        <li   ><a href="contact.html"   class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>   
+
+
+    <!-- main content-->
+     <main>      
+      <section id="signup">
+        <form id="signup-form" action="https://formdump.codeinstitute.net"  method="POST">
+            
+          <div class="my-form">
+                    <h2><i class="fa-solid fa-envelope"></i> Let's hear from you!  </h2>         
+                    <label for="first-field" >First Name:</label>
+                    <input id="first-field" type="text" name="f_name" placeholder="Your  First Name" required class="text-input">
+                    <br>
+                    <label for="last-name" >Last Name:</label>
+                    <input id="last-name" type="text" name="last_name" placeholder="Your  last Name" required class="text-input">
+                    <br>
+                    <label for="email-address" >Email:</label>
+                    <input id="email-address" type="email" name="email" placeholder="Your email" required class="text-input">
+                    <br>
+          </div>
+          <div class="my-form">  
+                    <textarea name="message" rows="10" cols="30" class="msg-input" placeholder="What do you have to say" ></textarea>
+                    <br>
+          </div>  
+            <button type="submit"  class="join-button">Send!</button>
+        </form>
+    </section>
+    </main>
+     <!--  footer-->
+     <footer  > 
+      <ul  id="social-networks">
+    
+          <li> <a href="https://www.facebook.com/" target="_blank" rel="noopener"  
+                  aria-label="Visit our Facebook page (opens in a new tab)">
+                  <i class="fa-brands fa-square-facebook"></i>
+          </a> 
+          </li>
+          
+          <li><a href="https://x.com/?lang=en" target="_blank" rel="noopener"  
+                  aria-label="Visit our twitter page (opens in a new tab)">
+                  <i class="fa-brands fa-square-x-twitter"></i>
+          </a> 
+          </li>
+           <!-- 
+          <li>
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener"  
+                    aria-label="Visit our youtube page (opens in a new tab)">
+                    <i class="fa-brands fa-square-youtube"></i>
+                </a>
+          </li> -->
+    
+          <li>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener"  
+                      aria-label="Visit our instagram page (opens in a new tab)">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+          </li>
+      </ul>
+    </footer>
+      <!-- fontawesome kit -->
+      <script src="https://kit.fontawesome.com/74c90bdddd.js" crossorigin="anonymous"></script>
+</body>
+</html>

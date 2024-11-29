@@ -1,0 +1,24 @@
+/* Footer */
+footer {
+    background-color: #ffffff;
+}
+
+#social-networks {
+display: flex;
+text-align: center;
+justify-content: space-evenly;
+padding: 20px 5px;
+list-style-type: none;
+
+
+
+ /* next lines for embeded header from outer file */
+/* margin-top: 80px; */
+}
+
+#social-networks i {
+     font-size: 160%;
+     padding: 5%;
+     color:  #3a3a3a;
+}
+/* end of footer */

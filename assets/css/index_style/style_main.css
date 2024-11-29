@@ -13,20 +13,6 @@ main {
 
 }
 
-
-
-
-
-
-
-
-/* for a larger screen ---  START   !!!!!!!!!!!*/
-
-/* @media screen and (min-width:768px){ */
-
-
-
-
 .categories-col {
 
     width: 50%; 
@@ -37,10 +23,11 @@ main {
     max-height: 120px;
     border:solid 2px  var(--color-6);
     justify-content: center;
+    border-radius: 20px;
     
     padding: 5px;
     margin: 5px auto ;
-    background-color: var(--color-4);
+    background-color: var(--color-5);
     
 }
 

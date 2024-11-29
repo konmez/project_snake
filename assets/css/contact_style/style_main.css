@@ -1,0 +1,17 @@
+
+main {
+    background-color: var(--main-background);
+    /* background: url(../../images/abstract-composition.svg) no-repeat center  center/cover; */
+    
+    flex: 1 0 auto;    
+    margin-top: 50px;    
+    /* Enable flex properties for the child elements */
+    display: flex;
+    flex-direction:column;
+    margin-top: 40px;
+    /* border: solid 3px red; */    
+
+}
+
+
+

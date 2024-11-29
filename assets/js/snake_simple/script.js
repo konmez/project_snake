@@ -13,14 +13,44 @@ let snakeBody ='#067066';
 let snakeHead = '#471b06';
 let canvasColor = '#F0824F';
 
+//langht of 1 link in snake body, used also in set up coordinates of snake, apple, 
+//snake move and field size, can be changed in canvasSet
+let linkLength = 20;
+
 /**
- * setting up a canvas for the game * 
+ * initialize up a canvas for the game * 
  */
-canvas   = O('mycanvas');
-context = canvas.getContext('2d');
+let canvas = O('mycanvas');
+let context = canvas.getContext('2d');
 setCanvas();
 context.save();
 
+/**
+ * set canvas size, according to the screen 
+ */      
+function setCanvas(){       
+    let new_w =0;  
+    S(canvas).background = canvasColor; 
+    console.log('from setCanvas',"canvas",canvas, "Cw",canvas.width);
+    console.log('from setCanvas',"canvas",canvas, "CH",canvas.height);
+
+    let w = window.innerWidth;
+    //let h = window.innerHeight;
+    if (w<560){
+        // linkLength = 20;
+        new_w = linkLength*Math.floor((w-4*linkLength)/linkLength);       
+        
+    } else {
+        // linkLength = 20;
+        new_w = linkLength*Math.floor((560-4*linkLength)/linkLength);
+    }   
+    
+    canvas.height = new_w;
+    canvas.width =  new_w;
+    context.save();  
+    console.log('from setCanvas', 'canvas.height',  canvas.height);
+
+}
 
 
 // setting globals for the game
@@ -37,8 +67,7 @@ let is_game_over =false;
 
 window.addEventListener("keyup", keyCheck);
 
-//langht of 1 link in snake body, used also in set up coordinates of snake, apple, snake move and field size
-let linkLength = 0;
+
 
 //array keeps coordinates of snake body links, head-last item n array
 let mySnake =[];
@@ -66,13 +95,13 @@ let myInterval=null;
 //
 
 
-/**
- * set canvas 
- */      
-function setCanvas(){    
-    S(canvas).background = canvasColor;    
-    //console.log('from setCanvas');
-}
+// /**
+//  * set canvas 
+//  */      
+// function setCanvas(){    
+//     S(canvas).background = canvasColor;    
+//     //console.log('from setCanvas');
+// }
 
 document.addEventListener('DOMContentLoaded',function(){ console.log("loaded, from doc. add listener")});      
       
@@ -84,7 +113,9 @@ for (let button of buttons) {button.addEventListener('click',buttonCheck);}
 
 function startingScene(){
    // console.log('starting!!, from starting scene');
-    linkLength = 20;
+    // linkLength = 20;
+
+    console.log('starting!!, from starting scene', 'linkLength',linkLength);
     mySnake = makeSnake();
     apple = makeApple();
     drawSnake(mySnake);

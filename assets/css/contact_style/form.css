@@ -1,0 +1,93 @@
+
+
+
+
+/* Sign up form*/
+#signup-form h2{
+    color: #fafafa;
+    margin: 30px 30px 20px 30px; 
+  }
+  
+  #signup-form{
+      background-color: rgba(60, 60, 60,0.6);
+      color: #ffffff;
+      padding: 30px;  
+      display: flex;
+      flex-direction: column;
+        
+  }
+  
+  #signup{         
+      background: url(../images/write.jpg) ;  
+      background-size: cover;
+      background-position: 75%;  
+      flex-grow: 1;  
+      padding: 20px 10% 0 10%;
+     
+  }
+  
+  
+  .text-input {
+      color: #454b1b;
+      border: 1px solid #fafafa;
+      border-radius: 2px;
+      width: 100%;   
+      padding: 0 5px;
+      height: 25px;
+      margin: 5px 0 20px 0;
+  
+      font-family: 'Oswald', sans-serif;   
+      letter-spacing: 2px;
+      color: #252525;
+  }
+  
+  .msg-input{
+      color: #454b1b;
+      border: 1px solid #fafafa;
+      border-radius: 2px;
+      width: 100%;   
+      padding: 0 5px;    
+      margin: 5px 0 20px 0;
+      
+  
+      font-family: 'Oswald', sans-serif;   
+      letter-spacing: 2px;
+      color: #252525;
+  }
+  
+  .join-button{
+    background-color: #454b1b;
+    color: #fafafa;
+    font-size: 100%;
+    padding: 15px 32px;
+    border-radius: 2px;
+    margin-top: 20px;
+  }
+
+
+  /* Media query: tablet and larger(>=768px) */
+@media screen and (min-width:768px){
+
+
+/* For the form */
+#signup{          
+    background-position: center;  
+    position: relative;
+}
+
+#signup-form{   
+    max-width: 400px;     
+    top: 150px;
+    left:10%;
+}
+
+.text-input:hover{
+    border-color: #070000;
+} 
+
+.join-button:hover{
+    background-color: #fafafa;
+    color: #454b1b;
+}
+}
+

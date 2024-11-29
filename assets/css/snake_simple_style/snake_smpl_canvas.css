@@ -34,11 +34,9 @@ main {
 }
 
 #mycanvas {
-    width: 600px ;
-    height: 500px;
+    
     margin: auto;
-    /* width: 80%;
-    height: 50%; */
+    border: solid 3px red;
 }
 
 #snake-score{
@@ -46,13 +44,16 @@ main {
     font-size:x-large;    
 }
 
-.control-area {
+#control-area {
     display: flex;
     flex-direction:row;   
     margin-left: 5px;
     align-items: center;
     border: solid 5px brown;
 /* height - the same as height of canvas */    
+
+
+    height: 100%;
     align-items: flex-start;
     margin:auto;
     max-width: 95vh;
@@ -86,8 +87,7 @@ main {
 
 .row{
     margin:auto;
-    /* border: solid 2px blue; */
-    
+    /* border: solid 2px blue; */    
 }
 
 
@@ -124,14 +124,14 @@ main {
 }
 
 
-.control-area {
+#control-area {
     display: flex;
     flex-direction:column;   
     margin-left: 5px;
     align-items: center;
     /* border: solid 5px brown; */
 /* height - the same as height of canvas */
-    height: 500px;
+    height: 480px;
 
 }
 
