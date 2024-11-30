@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded',function(){  console.log("loaded, from doc. add listener")});  
 
 /* colour palette 1 */
 // --color-1: #F0824F;
@@ -25,33 +25,31 @@ let context = canvas.getContext('2d');
 setCanvas();
 context.save();
 
-/**
- * set canvas size, according to the screen 
- */      
-function setCanvas(){       
-    let new_w =0;  
-    S(canvas).background = canvasColor; 
-    console.log('from setCanvas',"canvas",canvas, "Cw",canvas.width);
-    console.log('from setCanvas',"canvas",canvas, "CH",canvas.height);
 
-    let w = window.innerWidth;
-    //let h = window.innerHeight;
-    if (w<560){
-        // linkLength = 20;
-        new_w = linkLength*Math.floor((w-4*linkLength)/linkLength);       
-        
-    } else {
-        // linkLength = 20;
-        new_w = linkLength*Math.floor((560-4*linkLength)/linkLength);
-    }   
-    
-    canvas.height = new_w;
-    canvas.width =  new_w;
-    context.save();  
-    console.log('from setCanvas', 'canvas.height',  canvas.height);
+// sound = function(src) {
+//     this.sound = document.createElement('audio');
+//     this.sound.src = src;
+//     this.sound.setAttribute('preload', 'auto');
+//     this.sound.setAttribute('controls', 'none');
+//     this.sound.style.display = 'none';
+//     document.body.appendChild(this.sound);
+//     this.play = function() {
+//         this.sound.play();
+//     }
+//     this.stop = function() {
+//         this.sound.pause();
+//     }
+// }
 
-}
 
+
+
+
+// const sound1 = new sound('./assets/audio/mus1.mp3');
+// sound1.play();
+// console.log('after sound1', sound1);
+
+// console.log('after sound');
 
 // setting globals for the game
 let is_game_paused = true;
@@ -91,19 +89,9 @@ let direction = [1, 0];
 let myInterval=null;
 
 
-//let myInterval=0;
-//
 
 
-// /**
-//  * set canvas 
-//  */      
-// function setCanvas(){    
-//     S(canvas).background = canvasColor;    
-//     //console.log('from setCanvas');
-// }
-
-document.addEventListener('DOMContentLoaded',function(){ console.log("loaded, from doc. add listener")});      
+// document.addEventListener('DOMContentLoaded',function(){ console.log("loaded, from doc. add listener")});      
       
 let buttons = document.getElementsByTagName('button');   
 //console.log('buttons:', buttons);
@@ -115,7 +103,7 @@ function startingScene(){
    // console.log('starting!!, from starting scene');
     // linkLength = 20;
 
-    console.log('starting!!, from starting scene', 'linkLength',linkLength);
+    console.log(' from starting scene', 'linkLength',linkLength);
     mySnake = makeSnake();
     apple = makeApple();
     drawSnake(mySnake);
@@ -143,19 +131,31 @@ function startGame(){
        
     is_game_paused = false;        
     
+    
+    //TEST!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    
+
+
+
     myInterval = setInterval(game_frame, timeLapse);
 
    // console.log('3 from startGame ', 'game_started:',  game_started, myInterval);
     //console.log('4 from startGame timeLapse', timeLapse);
 
-   //}
+    
+
     function game_frame() { 
        // console.log('from game_frame');
         if (is_game_paused ===false){
+            sound_back.play();
+
+
             snakeShift(direction) ;
             drawSnake(mySnake);
             drawApple(apple);
             if (hitApple()) {
+                sound_eat.play();
+
                 // increase snake from tail side
                 let tail = mySnake[0];
                 mySnake = [tail, ...mySnake];
@@ -172,8 +172,47 @@ function startGame(){
                 is_game_over = true;
                 game_started = false;
                 is_game_paused = true;
+                showGameOver();
+
+                sound_back.stop();
+                sound_game_over.play();
+
             }
-        }
+        } else {sound_back.stop();}
     }
 }
+
+/**
+ * set canvas size, according to the screen 
+ */      
+function setCanvas(){       
+    let new_w =0;  
+    S(canvas).background = canvasColor; 
+    console.log('from setCanvas',"canvas",canvas, "Cw",canvas.width);
+    console.log('from setCanvas',"canvas",canvas, "CH",canvas.height);
+
+    let w = window.innerWidth;
+    //let h = window.innerHeight;
+    if (w<560){
+        // linkLength = 20;
+        new_w = linkLength*Math.floor((w-4*linkLength)/linkLength);       
+        
+    } else {
+        // linkLength = 20;
+        new_w = linkLength*Math.floor((560-4*linkLength)/linkLength);
+    }   
+    
+    canvas.height = new_w;
+    canvas.width =  new_w;
+    context.save();  
+    console.log('from setCanvas', 'canvas.height',  canvas.height);
+}
+
+function showGameOver(){
+    // console.log('from showGameOver');
+    context.fillStyle    = 'darkred';
+    context.font = "30px Arial";
+    context.fillText("Game Over!",canvas.width/5, canvas.height/2);
+}
+
 
