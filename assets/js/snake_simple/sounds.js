@@ -29,4 +29,7 @@ let sound_back = sound_back2;
 let sound_eat = sound_eat2;
 
 sound_back.sound.setAttribute('loop', 'true');
-sound_back.sound.volume= 0.01;
+sound_back.sound.volume= 0.03;
+sound_eat.sound.volume= 0.03;
+sound_game_over.sound.volume= 0.03;
+

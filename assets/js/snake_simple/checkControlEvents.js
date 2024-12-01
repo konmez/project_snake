@@ -16,10 +16,11 @@ function keyCheck(event) {
         let control = '';
        
         if (key_pressed ===' ')          {control = 'pause'};
-        if (key_pressed ==='ArrowRight') {control = 'right'};
-        if (key_pressed ==='ArrowUp')    {control = 'up'   };
-        if (key_pressed ==='ArrowDown')  {control = 'down' };
-        if (key_pressed ==='ArrowLeft')  {control = 'left' };
+        if (key_pressed ==='ArrowRight'|| key_pressed ==='d'|| key_pressed ==='D') {control = 'right'};
+        if (key_pressed ==='ArrowUp'|| key_pressed ==='w'|| key_pressed ==='W')   {control = 'up'   };
+        if (key_pressed ==='ArrowDown'|| key_pressed ==='s'|| key_pressed ==='S')  {control = 'down' };
+        if (key_pressed ==='ArrowLeft'|| key_pressed ==='a'|| key_pressed ==='A')  {control = 'left' };
+        if (key_pressed ==='r'||key_pressed ==='R')          {control = 'start'};
         
         //console.log('from key check; pressed :', key_pressed ,'key_counter:  ', key_counter);        
         
