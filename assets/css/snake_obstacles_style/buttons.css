@@ -1,0 +1,107 @@
+/* these are buttons from Code Institute */
+
+
+.btn-big {
+    padding-top: 10px;
+    border-radius: 50%;
+    background-color:white;
+    border: 10px solid;
+    width: 100px;
+    height: 100px;
+    font-size: 3.2rem;
+    
+    /* transition: all 4s; */
+    
+    padding-bottom: 9px;
+    margin: 0 3px;
+}
+
+.btn-drctn {
+    border-color: var(--control-button);
+    color: var(--control-button);
+    /* margin-bottom: -0px; */
+}
+
+
+.btn-sp {
+    border-color: var(--sp-buttons-color);
+    color: var(--sp-buttons-color);
+    z-index: 15;
+}
+
+.btn-sp:active,
+.btn-sp:hover {   
+    background-color: var(--color-4);
+    transition: all 0.5s;
+    color: white;
+   
+}
+
+
+
+
+.btn-drctn:active,
+.btn-drctn:hover {
+    background-color: darkgreen;
+    color: white;
+    transition: all 0.5s;
+}
+
+
+#restart{
+    padding: 5px;
+    margin: auto;
+}
+
+#pause-button{
+    padding: 5px;
+}
+
+
+
+@media screen and (max-width:760px){
+ 
+    
+    .btn:focus {
+        outline: none;
+    }
+
+    .btn-big {
+        padding-top: 5px;
+        border-radius: 50%;
+        background-color: white;
+       
+        border: 6px solid;
+        width:60px;
+        height: 60px;
+        font-size: 1.6rem;     
+       
+        margin: 0 3px;
+
+        
+    }
+    
+    .btn-drctn {
+        border-color: var(--control-button);
+        color: var(--control-button);
+        margin-bottom: 0px;
+    }
+    
+    .btn-drctn:active,
+    .btn-drctn:hover {
+        background-color: darkgreen;
+        color: white;
+       
+    }
+
+     
+    .btn-sp {
+        border-color: var(--sp-buttons-color);
+        color: var(--sp-buttons-color);
+        margin-bottom: 0px;
+    }
+    
+
+
+
+}
