@@ -125,4 +125,4 @@ To check my project, please, click <a href="https://konmez.github.io/project_sna
 Snippet from game :
 <img src="./assets/images/Snake_snip.jpg">.
 Snippet about perfomance :
-<img src="./assets/images/#">
+<img src="./assets/images/Snake_perfomance.jpg">
