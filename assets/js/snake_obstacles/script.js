@@ -142,10 +142,14 @@ function startGame(){
                     // generate obstacle every 2nd apple appeared
                     obstcl = makeObstcl();
                     obstacles.push(obstcl);
-                    console.log('from game_frame', counter, obstacles);
+                    console.log('from game_frame','count',counter, obstacles, 'apple', apple);
                 }               
-                //check the apple against obstacle array
-                while (obstacles.includes(apple)) { apple = makeApple();}                
+                // make sure obstacles array doesn't contain the apple 
+                while (isInArray(apple, obstacles)) {
+                     apple = makeApple();
+                     console.log('from while, apple',apple)
+                     console.log('from while, obstacles', obstacles)
+                    }                
             }
 
             let scoreElmnt = O("snake-score");    
@@ -200,4 +204,12 @@ function showGameOver(){
     context.fillText("Game Over!",canvas.width/5, canvas.height/2);
 }
 
+function isInArray(item, myarray){
+    for (array_item of myarray){
+        if (item[0] ===array_item[0] && item[1] ===array_item[1]) {return true}
+    }
+    return false;
 
+    
+
+}

@@ -25,32 +25,6 @@ let context = canvas.getContext('2d');
 setCanvas();
 context.save();
 
-
-// sound = function(src) {
-//     this.sound = document.createElement('audio');
-//     this.sound.src = src;
-//     this.sound.setAttribute('preload', 'auto');
-//     this.sound.setAttribute('controls', 'none');
-//     this.sound.style.display = 'none';
-//     document.body.appendChild(this.sound);
-//     this.play = function() {
-//         this.sound.play();
-//     }
-//     this.stop = function() {
-//         this.sound.pause();
-//     }
-// }
-
-
-
-
-
-// const sound1 = new sound('./assets/audio/mus1.mp3');
-// sound1.play();
-// console.log('after sound1', sound1);
-
-// console.log('after sound');
-
 // setting globals for the game
 let is_game_paused = true;
 let game_started = false;
@@ -64,8 +38,6 @@ let is_game_over =false;
 
 
 window.addEventListener("keyup", keyCheck);
-
-
 
 //array keeps coordinates of snake body links, head-last item n array
 let mySnake =[];
@@ -173,10 +145,8 @@ function startGame(){
                 game_started = false;
                 is_game_paused = true;
                 showGameOver();
-
                 sound_back.stop();
                 sound_game_over.play();
-
             }
         } else {sound_back.stop();}
     }

@@ -1,5 +1,7 @@
 # Browser Snake Game 🐍
 
+
+
 ## Description
 A classic Snake game built with vanilla JavaScript, HTML, and CSS. Control a snake as it moves around the game board, eat food to grow longer, and avoid hitting the walls or yourself! Features include responsive controls, sound effects, and a restart option.
 
@@ -46,11 +48,17 @@ git clone https://github.com/konmez/project_snake.git
 ```
 snake-game/
 │
-├── index.html          # Main HTML file
+├── index.html                         # Main HTML file
+├── snake_simple.html                  # simplest snake 
+├── snake_with_obstacles.html          #snake with generated obstacles and less control buttons
+├── contact.html                       # contact page
+|
 ├── css/
-│   └── index_style/      # main page style
-|   ├── contact_style/    #contact page style
-|   ├── snake_simple_style/ #game page style
+│   ├── index_style/           # main page style
+|   ├── contact_style/         #contact page style
+|   ├── snake_simple_style/    #game page style
+|   ├── snake_obstacles_style/ #anothe snake game styles
+|
 ├── js/          # Game logic
 │               # Input handling
 │               # Sound management
@@ -110,3 +118,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 - Kon mez (mailto:kmezin@yahoo.om)
 - Project Link: [https://konmez.github.io/project_snake/]
+
+
+To check my project, please, click <a href="https://konmez.github.io/project_snake/" target="_blank">this link.</a>
+
+Snippet from game :
+<img src="./assets/images/Snake_snip.jpg">.
+Snippet about perfomance :
+<img src="./assets/images/#">

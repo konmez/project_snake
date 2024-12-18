@@ -1,4 +1,6 @@
 
+
+// from Stack Overflow :
 sound = function(src) {
     this.sound = document.createElement('audio');
     this.sound.src = src;
@@ -29,11 +31,14 @@ let sound_back = sound_back2;
 let sound_eat = sound_eat2;
 
 sound_back.sound.setAttribute('loop', 'true');
-// sound_back.sound.volume= 0.03;
-// sound_eat.sound.volume= 0.03;
-// sound_game_over.sound.volume= 0.03;
-sound_back.sound.volume= 0.0;
-sound_eat.sound.volume= 0.0;
-sound_game_over.sound.volume= 0.0;
+// set up sound volume:
+sound_back.sound.volume= 0.03;
+sound_eat.sound.volume= 0.03;
+sound_game_over.sound.volume= 0.03;
+
+// silent all:
+// sound_back.sound.volume= 0.0;
+// sound_eat.sound.volume= 0.0;
+// sound_game_over.sound.volume= 0.0;
 
 

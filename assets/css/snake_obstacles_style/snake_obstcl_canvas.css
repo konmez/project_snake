@@ -1,3 +1,5 @@
+/* design ideas  as template from Code Institute 'LoveRuning & LoveMath' projects */
+
 
 /* Header */
 /* moved to header.css */
@@ -7,7 +9,8 @@
 
 main {
     background-color: var(--main-background);
-    /* background-image: url(../images/james-lee-8vU2drMLiyM-unsplash.jpg); */
+    /* background-image: url(../../images/classic_snake_game_1.png)  ; */
+    
     /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;     
      

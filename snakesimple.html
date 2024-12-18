@@ -9,7 +9,7 @@
    <meta name="description"  content="game snake" >
    <meta name="keywords" content="game snake">
 
-  <title>game tmp</title>
+  <title>Snake Game </title>
 
   <!-- favicon -->
    <link rel="apple-touch-icon" sizes="100x100"  href="./assets/images/favicon_io/apple-touch-icon.png">
@@ -52,17 +52,12 @@
     <!-- main content-->
     <main>
 
-
-       
        <div class="canvas-wrap center"   >
           <div class="canvas-container"  > 
                   <canvas canvas id='mycanvas'  >
-                    <!-- <canvas canvas id='mycanvas'  width='250' height='250'> -->
-
-                  </canvas>
-                
+                  </canvas>                
           </div>
-
+                <!-- DIV with control buttons -->
                 <div id="control-area">
 
                   <div class="score-text center "   id = 'score-div'> 
@@ -71,8 +66,7 @@
 
                   <div  class="start-pause">
                     
-                      <div class=" center score-text" id="restart">
-                        
+                      <div class=" center score-text" id="restart">                        
                         <button class="   btn-big btn-sp" data-type="start" >
                           <span class="padding"> <i class="fa-solid fa-play"></i></span>
                         </button>   
@@ -110,9 +104,7 @@
                             <i class="fa-solid fa-arrow-down"></i>
                           </button>
                         </div>  
-                  </div>  
-
-                 
+                  </div>                
 
                 </div>    
         </div>
@@ -140,7 +132,7 @@
     
 
 
-    <!-- prevent complaining browser about partially downloaded content -->
+    <!-- prevent complaining browser about partially downloaded content, from Stack Overflow  -->
     <script >
         var elm=document.getElementsByTagName("html")[0];
         elm.style.display="none";
