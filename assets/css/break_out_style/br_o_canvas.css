@@ -1,0 +1,77 @@
+/* design ideas  as template from Code Institute 'LoveRuning & LoveMath' projects */
+
+
+/* Header */
+/* moved to header.css */
+  /* end of header section*/
+
+  /* Main content */
+
+main {
+    background-color: var(--main-background);
+    /* background-image: url(../../images/classic_snake_game_1.png)  ; */
+    
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;     
+     
+    /* Enable flex properties for the child elements  */
+    display: flex;
+    flex-direction:column;
+    margin-top: 45px; 
+    width: 100%;
+    /* border: solid 3px blue; */
+}
+
+.canvas-wrap{
+    width: 99%;
+    display: flex;
+    text-align: center;   
+    flex-direction: column;
+    /* border: solid 3px green; */
+}
+
+canvas {
+    background: #000;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.score-display {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.lives-display {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* for a larger screen ---!!!!!!!!!!!*/
+
+@media screen and (min-width:768px){
+
+main {
+    
+    margin-top: 53px; 
+    /* border: solid 3px red; */
+}
+
+
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin:auto;    
+}
+
+
+}

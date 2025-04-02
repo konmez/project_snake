@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Breakout</title>
+    <link rel="stylesheet" href="./assets/css/break_out_style/styles_br_o.css">
+    <link rel="stylesheet" href="./assets/css/break_out_style/general.css">
+    <link rel="stylesheet" href="./assets/css/break_out_style/header.css">
+    <link rel="stylesheet" href="./assets/css/break_out_style/br_o_canvas.css">  
+    <link rel="stylesheet" href="./assets/css/break_out_style/buttons.css">
+</head>
+<body>
+
+    <header >        
+        <h1 id="logo">simple games</h1>       
+        <input type="checkbox" id="nav-toggled" name="nav-toggled">
+        <label for="nav-toggled" class="nav-toggled-label"><i class="fa-solid fa-bars"></i></label>
+        <nav>
+          <ul id="menu" >
+            <li> <a href="index.html"  class="active">Home</a> </li>
+            <li>        
+              <label for="cat-toggled" class="cat-toggled-label">Games:</label>
+              <input type="checkbox" id="cat-toggled" name="cat-toggled" >
+                <ul id="cat-menu">
+                  <li><a href="snakesimple.html"  >snake simple</a></li>                  
+                  <li><a href="snake_with_obstacles.html">snake with obstacles</a></li>
+                  <li><a href="index_br_o.html">break out</a></li>
+                  <li><a href="#">Other</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>   
+
+    <main>
+        <div class="canvas-wrap center"   >
+              
+                <div >
+                <div class="score-display  center ">Score: <span id="score">0</span></div>
+                
+                    
+                    <div class="lives-display">Lives: <span id="lives">3</span></div>
+                </div>
+                <canvas id="gameCanvas" width="480" height="360"></canvas>
+                <div class="controls">
+                    <button id="startBtn">Start Game</button>
+                    <button id="pauseBtn">Pause</button>
+                    <button id="resetBtn">Reset</button>
+                </div>
+                <div>
+                    <p>Controls: Use <strong>left/right arrow keys</strong> or <strong>touch/mouse</strong> to move the paddle</p>
+                </div>
+        </div>    
+    </main>
+    <script src="./assets/js/break_out_script/script_br_o.js"></script>
+
+
+</body>
+</html>

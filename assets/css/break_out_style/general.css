@@ -1,0 +1,57 @@
+:root {
+    /* colour palette 1 */
+       --color-1: #F0824F;
+       --color-2: #7BB0AB;
+       --color-3: #6EF0E3;
+       --color-4: #A18B81;
+       --color-5: #067066;
+       --color-6: #471b06;   
+        
+       --main-background : var(--color-4);   
+       --header-background: var(--color-2);
+       --control-button:var(--color-5);
+       --sp-buttons-color: var(--color-6);
+      }
+    
+/* design ideas  as template from Code Institute 'LoveRuning & LoveMath' projects */
+
+    /* Asterisk wildcard selector to override default styles added by the browser */
+    
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    /* General styles */
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        /* Generic project styles */
+        color: #3a3a3a;
+        font-family:  'Tahoma', 'Verdana', sans-serif;    
+        margin: 0;
+        align-items: center;
+      
+        /* border: 2px solid red; */
+    }
+    
+    
+    h1,h2,h3,h4,h5 {
+        font-family: 'Verdana','Tahoma',  sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #252525; 
+    } 
+    
+    a{
+       text-decoration: none;
+    }
+
+    
+/* Header */
+/* moved to header.css */
+  /* end of header section*/
+
+  
